@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Train Scheduler</title>
+	<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+ <div class="container">
+	 <div class="jumbotron">
+	  <h1>Train Scheduler</h1>
+	 </div>
+ </div>
+ <div class="container">
+	 <div class="panel panel-default">
+		 <div class="panel-heading">
+		 <h3 class="panel-title">Current Train Schedule</h3>
+		 </div>
+		 <div class="panel-body">
+			 <div class="container" id="train-schedules">
+				 <div class="row" id="headings">
+					 <div class="col-md-2">Train Name</div>
+					 <div class="col-md-2">Destination</div>
+					 <div class="col-md-2">Frequency (min)</div>
+					 <div class="col-md-2">Next Arrival</div>
+					 <div class="col-md-2">Minutes Away</div>
+				 </div>
+			 </div>
+		 </div>
+	 </div>
+ </div>
+ <div class="container">
+	 <div class="panel panel-default">
+		 <div class="panel-heading">
+		 	<h3 class="panel-title">Add Train</h3>
+		 </div>
+		 <div class="panel-body">
+			<div class="input-group">
+				<span class="input-group-addon" id="basic-addon1">Train Name</span>
+				<input type="text" class="form-control" placeholder="Enter Name" aria-describedby="basic-addon1" id="train-name">
+			</div>
+			<div class="input-group">
+				<span class="input-group-addon" id="basic-addon1">Destination</span>
+				<input type="text" class="form-control" placeholder="Enter Destination" aria-describedby="basic-addon1" id="destination">
+			</div>
+			<div class="input-group">
+				<span class="input-group-addon" id="basic-addon1">First Train Time</span>
+				<input type="text" class="form-control" placeholder="Enter First Train Time in military time (Format HH:mm)" aria-describedby="basic-addon1"
+				id="first-time">
+			</div>
+			<div class="input-group">
+				<span class="input-group-addon" id="basic-addon1">Frequency (min)</span>
+				<input type="text" class="form-control" placeholder="Enter Frequency" aria-describedby="basic-addon1"
+				id="freqency">
+			</div>
+			<button type="button" class="btn btn-primary" id="submit">submit</button> 
+		 </div>
+	 </div>
+ </div>
+ <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+ <script src="logic.js"></script>
+ <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</body>
+</html>
